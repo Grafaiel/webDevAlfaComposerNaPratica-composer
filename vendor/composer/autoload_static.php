@@ -32,7 +32,7 @@ class ComposerStaticInitbceaef53979fa55e8140c51b39e2e80c
         ),
         'Psr\\Log\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+            0 => __DIR__ . '/..' . '/psr/log/src',
         ),
         'OlaMundo\\' => 
         array (
@@ -44,11 +44,16 @@ class ComposerStaticInitbceaef53979fa55e8140c51b39e2e80c
         ),
     );
 
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitbceaef53979fa55e8140c51b39e2e80c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitbceaef53979fa55e8140c51b39e2e80c::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitbceaef53979fa55e8140c51b39e2e80c::$classMap;
 
         }, null, ClassLoader::class);
     }

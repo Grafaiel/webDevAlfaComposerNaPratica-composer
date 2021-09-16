@@ -2,7 +2,7 @@
 
 namespace App;
 
-require __DIR__ . "/../vendor/autoload.php"; 
+require __DIR__ . "/../vendor/autoload.php";
 
 
 use OlaMundo\BomDia;
@@ -14,6 +14,7 @@ use Monolog\Handler\StreamHandler;
 $bomDia = new BomDia();
 $boaNoite = new BoaNoite();
 $bomSabado = new BomSabado();
+
 
 echo $bomDia->exibirMensagem();
 echo PHP_EOL;

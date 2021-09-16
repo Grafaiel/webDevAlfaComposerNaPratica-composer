@@ -7,7 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Tchau\\' => array($baseDir . '/src/Tchau'),
-    'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
+    'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
     'OlaMundo\\' => array($baseDir . '/src/OlaMundo'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
 );
